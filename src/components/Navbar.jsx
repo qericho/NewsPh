@@ -20,7 +20,7 @@ const Navbar = () => {
           <div className="flex-shrink-0 text-2xl font-bold text-slate-800">
             NewsPh
           </div>
-          <div className="hidden sm:flex space-x-6">
+          <div className="hidden lg:flex space-x-6">
             {categories.map((cat) => (
               <Link
                 key={cat}
@@ -32,7 +32,7 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="sm:hidden relative w-6 h-6">
+          <div className="lg:hidden relative w-6 h-6">
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="cursor-pointer absolute top-0 left-0 w-6 h-6 flex flex-col justify-center items-center focus:outline-none"

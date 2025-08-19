@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import NewsCard from "./NewsCard";
 import useNewsStore from "../store/newsStore";
-import Footer from "./Footer";
 import Loader from "./Loader";
 
 const News = ({ category = "general" }) => {
@@ -40,7 +39,6 @@ const News = ({ category = "general" }) => {
           </div>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
