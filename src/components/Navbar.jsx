@@ -3,17 +3,23 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const categories = ["Business", "Technology", "Sports", "Entertainment"];
+  const categories = [
+    "General",
+    "Business",
+    "Entertainment",
+    "Health",
+    "Science",
+    "Sports",
+    "Technology",
+  ];
 
   return (
     <nav className="bg-white shadow-md">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
           <div className="flex-shrink-0 text-2xl font-bold text-slate-800">
             NewsPh
           </div>
-          {/* Desktop Menu */}
           <div className="hidden sm:flex space-x-6">
             {categories.map((cat) => (
               <Link
@@ -26,7 +32,6 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile Menu Button */}
           <div className="sm:hidden relative w-6 h-6">
             <button
               onClick={() => setIsOpen(!isOpen)}
@@ -52,7 +57,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       <div
         className={`sm:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
